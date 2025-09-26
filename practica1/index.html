@@ -7,13 +7,43 @@
   </head>
   <body>
     <h1>Hola JS</h1>
+    <p id="timer"></p>
   </body>
   <!-- <script src="app.js"></script> -->
   <script type="module">
-    import { suma, resta } from "./funciones.js";
+    import { suma, resta, calculadora } from "./funciones.js";
     console.log("Hola desde funciones.js");
     console.log(suma(2, 3));
     console.log(resta(5, 2));
-    function calculadora(callback) {}
+
+    // TODO: hacer calculadora callback
+    console.log(calculadora(6, 7, suma));
+    console.log(calculadora(10, 7, resta));
+
+    //timer
+    import { timer } from "./funciones.js";
+    timer();
+    //utilizar fetch pro
+    //const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+    //const url = "https://fakestoreapi.com/products";
+    //https://fakestoreapi.com/products
+
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=10";
+
+    const consultar = async () => {
+      try {
+        let res = await fetch(url);
+        let datos = await res.json();
+        console.log(datos.count);
+        datos.results.forEach((pokemon) => {
+          console.log(pokemon.name);
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    consultar();
+    //.catch((err) => console.log(err));
   </script>
 </html>

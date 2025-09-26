@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f8f3f3;
+}
+
+body {
+  margin: 10px;
+  padding: 50px;
+}
+
+button {
+  margin: 20px;
+  padding: 10px;
+  background-color: black;
+  color: #f8f3f3;
+  border-radius: 10px;
+  border: 5px solid gray;
+}
+
+.notas {
+  background-color: aliceblue;
+  width: 90vh;
+  border: 2px solid white;
+}
+
+.notas_card {
+  background-color: yellowgreen;
+  border: 2px solid white;
+  margin: 10px;
+  padding: 20px;
+}
+
+.producto {
+  width: 50vw;
+  color: black;
+  background-color: rgb(185, 247, 247);
+  border: 2px solid white;
+  margin: 10px;
+  padding: 20px;
+}
+
+.titulo_prod {
+  font-size: 2em;
+}
